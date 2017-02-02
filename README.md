@@ -29,3 +29,13 @@ def is_palindrome(N):
             return False
     if ret = True:
         return True
+        
+palindromes = []
+for i in range (999, 99, -1):
+    for j in range(999, 99, -1):
+        product = ij
+        if is_palindrome(product):
+            palindromes.append(product)
+            
+answer = max(palindromes)
+print(answer)
