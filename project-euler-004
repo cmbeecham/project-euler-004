@@ -1,3 +1,4 @@
+import math
 # project-euler-004
 # largest palindrome product
 
@@ -13,7 +14,7 @@ def is_palindrome(N):
         chars.append(char)
     ret = True
     if len(N_str) % 2 == 0:
-        for i in range(len(N_str)/2):
+        for i in range(int(len(N_str)/2)):
             if chars[i] == chars[len(N_str)-i-1]:
                 pass
             else:
@@ -21,21 +22,22 @@ def is_palindrome(N):
                 return False
     else:
     #if len(N_str) % 2 == 1
-    for i in range(math.ceil(len(N_str)/2.0)):
-        if chars[i] == chars[len(N_str)-i-1]:
-            pass
-        else:
-            ret = False
-            return False
-    if ret = True:
+        for i in range(math.ceil(len(N_str)/2.0)):
+            if chars[i] == chars[len(N_str)-i-1]:
+                pass
+            else:
+                ret = False
+                return False
+    if ret == True:
         return True
-        
-palindromes = []
-for i in range (999, 99, -1):
-    for j in range(999, 99, -1):
-        product = ij
-        if is_palindrome(product):
-            palindromes.append(product)
-            
-answer = max(palindromes)
-print(answer)
+
+numbers = []
+for i in range(999,99,-1):
+    for j in range(999,99,-1):
+        num = i*j
+        if is_palindrome(num):
+            numbers.append(num)
+print(numbers)
+print(max(numbers))
+
+
